@@ -1,6 +1,6 @@
 export const toggleElement = (target) => {
   const allSiblingElems = document.querySelectorAll('.row');
-  allSiblingElems.forEach((elem, index) => {
+  allSiblingElems.forEach((elem) => {
     if (elem.className.split(' ')[1] === target) {
       elem.classList.remove('content-inactive');
       elem.classList.add('content-active');
@@ -14,7 +14,7 @@ export const toggleElement = (target) => {
 export const toggleNav = (targetNav) => {
   const elemUl = document.querySelector('.nav-list');
   const allUl = elemUl.querySelectorAll('a');
-  allUl.forEach((elem, index) => {
+  allUl.forEach((elem) => {
     if (elem === targetNav) {
       elem.classList.add('nav-active');
     } else {
@@ -25,10 +25,9 @@ export const toggleNav = (targetNav) => {
 
 export const attachEventListeners = () => {
   const triggerElems = document.querySelectorAll('.nav-item');
-  triggerElems.forEach((singleElem, index) => {
+  triggerElems.forEach((singleElem) => {
     singleElem.addEventListener('click', (e) => {
       e.preventDefault();
-      const targetSection = singleElem.className;
       const targetSectionClass = singleElem.getAttribute('data-target');
       toggleElement(targetSectionClass);
       toggleNav(singleElem);

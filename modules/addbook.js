@@ -17,10 +17,6 @@ export default class Book {
 
   addBookToList(title, author) {
     // This method will add a new book into the booklist
-    if (!title || !author) {
-      alert('Please, insert title & author!');
-      return;
-    }
     this.bookCollection.push({ title, author });
     this.updateLocalStorageData();
     this.displayBooks();
@@ -61,7 +57,7 @@ export default class Book {
   }
 
   displayBooks() {
-    // This method will generate the complete booklist and display into the HTM
+    // This method will generate the complete booklist and display it
     const bookList = document.querySelector(this.elemToInsertData);
     bookList.innerHTML = this.generateHtmlForBookList();
     this.activateRemoveButton();
@@ -79,8 +75,10 @@ export default class Book {
     this.formElem.addEventListener('submit', (e) => {
       e.preventDefault();
       this.addBookToList(this.bookTitleField.value, this.bookAuthorField.value);
-      this.titleInput.value = '' || this.titleInput.value;
-      this.authorInput.value = '' || this.authorInput.value;
+      this.formInputFieldNormalize();
     });
+
+    this.bookTitleField = this.formElem.querySelector('.book-title');
+    this.bookAuthorField = this.formElem.querySelector('.book-author');
   }
 }
