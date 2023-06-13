@@ -5,6 +5,13 @@ body {
   padding: 0;
 }
 
+.container {
+  background-image: url("image/book-icon.png");
+  background-repeat: no-repeat;
+  height: 70vh;
+  background-position: center;
+}
+
 a {
   text-decoration: none;
 }
