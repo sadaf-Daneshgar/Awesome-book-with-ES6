@@ -59,7 +59,6 @@ class Book {
   displayBooks() {
     // Retrieve the book collection from localStorage
     this.bookCollection = JSON.parse(localStorage.getItem(this.bookCollectionName)) || [];
-  
     // Generate the complete booklist and display it
     const bookList = document.querySelector(this.elemToInsertData);
     bookList.innerHTML = this.generateHtmlForBookList();
