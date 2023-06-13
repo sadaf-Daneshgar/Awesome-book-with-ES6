@@ -1,4 +1,4 @@
-export default class Book {
+class Book {
   constructor(formElem, bookCollectionName, elemToInsertData) {
     this.bookCollectionName = bookCollectionName;
     this.elemToInsertData = elemToInsertData;
@@ -82,3 +82,5 @@ export default class Book {
     this.bookAuthorField = this.formElem.querySelector('.book-author');
   }
 }
+
+export default Book;
