@@ -126,6 +126,10 @@ li {
   color: #d20d0dcd;
 }
 
+.awsome-book:hover {
+  color: black;
+}
+
 .nav-item {
   font-size: 20px;
   color: black;
