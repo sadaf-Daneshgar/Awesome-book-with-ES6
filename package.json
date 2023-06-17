@@ -1,0 +1,16 @@
+{
+  "name": "awesome-book-with-es6",
+  "version": "1.0.0",
+  "description": "<div align=\"center\">\r   <img src=\"image/book-icon.png\" alt=\"logo\" width=\"150\"  height=\"auto\" />\r   <br/>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "framework": "^0.6.0",
+    "luxon": "^3.3.0"
+  }
+}
